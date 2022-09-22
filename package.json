@@ -1,0 +1,22 @@
+{
+  "name": "books-storage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhszewczyk/book-storage.git"
+  },
+  "author": "Barb Darowska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhszewczyk/book-storage/issues"
+  },
+  "homepage": "https://github.com/bhszewczyk/book-storage#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
