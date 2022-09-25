@@ -4,10 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Home</title>
+		<title>Booklist</title>
 	</head>
 	<body>
-		<h1>Welcome to my first node server for book storage</h1>
-		<a href="/books">Go to the book list</a>
+		<section>
+			<% books.forEach((book) => { %>
+			<p><em><%= book.title %></em> - <strong><%= book.author %></strong></p>
+			<% }); %>
+		</section>
 	</body>
 </html>

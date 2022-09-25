@@ -9,8 +9,12 @@ app.set('views', path.join(__dirname, 'views'));
 // set up engine as EJS
 app.set('view engine', 'ejs');
 
+app.get('/', (req, res) => {
+	res.render('home');
+});
+
 app.get('/books', (req, res) => {
-	res.render('home', { books });
+	res.render('books', { books });
 });
 
 app.listen(PORT, () => {
