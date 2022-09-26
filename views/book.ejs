@@ -24,6 +24,9 @@
 		<section>
 			<a href="/books">Go back to the books list</a>
 			<a href="/book/<%= id %>/edit">Edit a book</a>
+			<form method="POST" action="/book/<%= id %>?_method=DELETE">
+				<button>Delete</button>
+			</form>
 		</section>
 	</body>
 </html>

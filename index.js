@@ -88,6 +88,14 @@ app.post('/books', (req, res) => {
 	res.redirect('/books');
 });
 
+app.delete('/book/:id', (req, res) => {
+	const { id } = req.params;
+	console.log(id);
+	books.splice(books[id], 1);
+	console.log(books);
+	res.redirect('/books');
+});
+
 // listen to the port
 app.listen(PORT, () => {
 	console.log(`Listening to port ${PORT}...`);
