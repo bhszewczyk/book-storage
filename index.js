@@ -20,15 +20,15 @@ app.get('/books', (req, res) => {
 
 app.get('/book/:id', (req, res) => {
 	const { id } = req.params;
-	console.log(books[id]);
 	const book = books[id];
 
 	res.render('book', { book });
 });
 
+app.get('/books/new', (req, res) => {
+	res.render('new');
+});
+
 app.listen(PORT, () => {
 	console.log(`Listening to port ${PORT}...`);
-	// books.forEach((book) => {
-	// 	console.log(book.author);
-	// });
 });
