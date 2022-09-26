@@ -14,9 +14,12 @@
 			<p>Year released: <%= book.year %></p>
 			<p>Country: <%= book.country %></p>
 			<p>Original language: <%= book.language %></p>
+			<% if(book.link) { %>
+
 			<p>
 				<a href="<%= book.link %>" target="_blank">Wiki link</a>
 			</p>
+			<% } %>
 		</section>
 		<section>
 			<a href="/books">Go back to the books list</a>
