@@ -5,25 +5,42 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Booklist</title>
+		<link rel="stylesheet" href="/styles/styles.css" />
 	</head>
 	<body>
-		<section>
+		<section class="book-list">
 			<ol>
 				<% books.forEach((book, i) => { %>
 				<li>
-					<p>
-						<em><%= book.title %></em> - <strong><%= book.author %></strong>
-						<a href="/book/<%= i %>"> details </a>
-						<a href="/book/<%= i %>/edit"> edit </a>
-					</p>
+					<div class="card">
+						<div class="card-content">
+							<h3>
+								<span class="title"><%= book.title %></span> -
+								<strong><%= book.author %></strong>
+							</h3>
+							<div class="links">
+								<a class="link-button link-button--mini" href="/book/<%= i %>">
+									details
+								</a>
+								<a
+									class="link-button link-button--mini"
+									href="/book/<%= i %>/edit"
+								>
+									edit
+								</a>
+							</div>
+						</div>
+					</div>
 				</li>
 
 				<% }); %>
 			</ol>
-		</section>
-		<section>
-			<h2>Missing something?</h2>
-			<a href="books/new">Add a book</a>
+			<div class="card">
+				<div class="card-content">
+					<h2>Missing something?</h2>
+					<a class="link-button" href="books/new">Add a book</a>
+				</div>
+			</div>
 		</section>
 	</body>
 </html>

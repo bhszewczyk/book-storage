@@ -5,57 +5,79 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Add new book</title>
+		<link rel="stylesheet" href="/styles/styles.css"
 	</head>
 	<body>
-		<h1>Add a new book</h1>
-		<form action="/books" method="post">
-			<p>
-				<label for="author">Author:</label>
-				<input
-					id="author"
-					type="text"
-					placeholder="Author name"
-					name="author"
-				/>
-			</p>
-			<p>
-				<label for="title">Title:</label>
-				<input id="title" type="text" placeholder="Book title" name="title" />
-			</p>
-			<p>
-				<label for="year">Year released:</label>
-				<input id="year" type="text" placeholder="Release year" name="year" />
-			</p>
-			<p>
-				<label for="country">Country:</label>
-				<input id="country" name="country" placeholder="Country" type="text" />
-			</p>
-			<p>
-				<label for="language">Original language:</label>
-				<input
-					id="language"
-					name="language"
-					placeholder="Language"
-					type="text"
-				/>
-			</p>
-			<p>
-				<label for="link">Wiki link:</label>
-				<input
-					id="link"
-					name="link"
-					placeholder="Link to the wikipedia"
-					type="text"
-				/>
-			</p>
-			<p>
-				<label for="img">Number of pages:</label>
-				<input id="pages" name="pages" placeholder="Pages #" type="text" />
-			</p>
-			<button>Add</button>
-		</form>
-		<section>
-			<a href="/books">Back to the list</a>
+		<section class="page-content">
+			<h1>Add a new book</h1>
+			<div class="card">
+				<form action="/books" method="post" class="form-2cols">
+					<p>
+						<label for="author">Author:</label>
+						<input
+							id="author"
+							type="text"
+							placeholder="Author name"
+							name="author"
+						/>
+					</p>
+					<p>
+						<label for="title">Title:</label>
+						<input
+							id="title"
+							type="text"
+							placeholder="Book title"
+							name="title"
+						/>
+					</p>
+					<p>
+						<label for="year">Year released:</label>
+						<input
+							id="year"
+							type="text"
+							placeholder="Release year"
+							name="year"
+						/>
+					</p>
+					<p>
+						<label for="country">Country:</label>
+						<input
+							id="country"
+							name="country"
+							placeholder="Country"
+							type="text"
+						/>
+					</p>
+					<p>
+						<label for="language">Original language:</label>
+						<input
+							id="language"
+							name="language"
+							placeholder="Language"
+							type="text"
+						/>
+					</p>
+					<p>
+						<label for="link">Wiki link:</label>
+						<input
+							id="link"
+							name="link"
+							placeholder="Link to the wikipedia"
+							type="text"
+						/>
+					</p>
+					<p>
+						<label for="img">Number of pages:</label>
+						<input id="pages" name="pages" placeholder="Pages #" type="text" />
+					</p>
+					<button class="link-button">Add</button>
+				</form>
+			</div>
+			<section>
+				<a class="link-button link-button--mini" href="/books"
+					>Back to the list</a
+				>
+			</section>
 		</section>
 	</body>
 </html>

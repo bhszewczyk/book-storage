@@ -5,28 +5,36 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Book details</title>
+		<link rel="stylesheet" href="/styles/styles.css" />
 	</head>
 	<body>
-		<section>
-			<h1><em><%= book.title%></em></h1>
-			<p>Author: <%= book.author %></p>
-			<p>Pages: <%= book.pages %></p>
-			<p>Year released: <%= book.year %></p>
-			<p>Country: <%= book.country %></p>
-			<p>Original language: <%= book.language %></p>
-			<% if(book.link) { %>
+		<div class="page-content">
+			<section class="card">
+				<div class="card-content">
+					<h1><em><%= book.title%></em></h1>
+					<p>Author: <%= book.author %></p>
+					<p>Pages: <%= book.pages %></p>
+					<p>Year released: <%= book.year %></p>
+					<p>Country: <%= book.country %></p>
+					<p>Original language: <%= book.language %></p>
 
-			<p>
-				<a href="<%= book.link %>" target="_blank">Wiki link</a>
-			</p>
-			<% } %>
-		</section>
-		<section>
-			<a href="/books">Go back to the books list</a>
-			<a href="/book/<%= id %>/edit">Edit a book</a>
-			<form method="POST" action="/book/<%= id %>?_method=DELETE">
-				<button>Delete</button>
-			</form>
-		</section>
+					<% if(book.link) { %>
+
+					<p>
+						<a href="<%= book.link %>" target="_blank">Wiki link</a>
+					</p>
+					<% } %>
+				</div>
+			</section>
+			<section class="links">
+				<a class="link-button" href="/books">Go back to the books list</a>
+				<a class="link-button" href="/book/<%= id %>/edit">Edit a book</a>
+			</section>
+			<section>
+				<form method="POST" action="/book/<%= id %>?_method=DELETE">
+					<button>Delete</button>
+				</form>
+			</section>
+		</div>
 	</body>
 </html>

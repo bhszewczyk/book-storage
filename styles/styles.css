@@ -1,0 +1,135 @@
+html {
+	font-size: 62.5%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-size: 1.4rem;
+}
+
+h1 {
+	font-size: 2.4rem;
+}
+
+h3 {
+	font-size: 1.6rem;
+	margin: 4px 4px 16px 4px;
+}
+
+ol {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.book-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.card {
+	border: 1px solid #31493c;
+	border-radius: 5px;
+	margin: 8px auto;
+	display: inline-block;
+	width: 500px;
+	text-align: center;
+}
+
+.card-content {
+	padding: 4px 16px;
+	margin: 0 auto;
+	display: inline;
+}
+
+.links {
+	display: flex;
+	justify-content: space-around;
+	width: 500px;
+	margin: 0 auto;
+}
+
+.home-header {
+	text-align: center;
+}
+.section-buttons {
+	margin: 2rem;
+	text-align: center;
+}
+
+.link-button {
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	background: #31493c;
+	border: 1px solid #31493c;
+	border-radius: 5px;
+	color: #f5f5f5;
+	padding: 8px 16px;
+	margin: 0 auto;
+	text-decoration: none;
+	width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.link-button--mini {
+	font-size: 1.4rem;
+	padding: 4px 8px;
+	background-color: hsla(148, 20%, 24%, 0.5);
+}
+
+.link-button:hover {
+	background-color: #f5f5f5;
+	color: #31493c;
+}
+
+/* books.ejs */
+.title {
+	font-style: italic;
+	font-weight: 200;
+}
+
+/* book.ejs */
+
+.page-content {
+	width: 800px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.page-content section {
+	margin-top: 1.6rem;
+}
+
+/* new.ejs edit.ejs */
+
+.form-2cols {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.6rem;
+	margin: 16px 0;
+}
+
+.form-2cols p label {
+	display: inline-block;
+	text-align: start;
+	width: 150px;
+	font-weight: 600;
+}
+
+.form-2cols p input {
+	width: 250px;
+}
+
+.form-2cols button {
+	margin: 8px 0;
+}

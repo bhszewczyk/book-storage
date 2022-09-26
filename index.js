@@ -4,11 +4,12 @@ const PORT = 3000;
 const path = require('path');
 const books = require('./books.json');
 const methodOverride = require('method-override');
-const { v4: getUuid } = require('uuid');
-const { ECDH } = require('crypto');
 
 // enables parsing url forms
 app.use(express.urlencoded({ extended: true }));
+
+// add absolute path
+app.use(express.static(path.join(__dirname, '/')));
 
 // use methodOverride to change the method to proper one in web
 // as forms can only send GET and POST requests

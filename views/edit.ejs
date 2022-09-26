@@ -5,51 +5,67 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Edit a book</title>
+		<link rel="stylesheet" href="/styles/styles.css"
 	</head>
 	<body>
-		<form action="/book/<%=id%>?_method=PATCH" method="post">
-			<p>
-				<label for="author">Author:</label>
-				<textarea id="author" name="author" type="text">
+		<section class="page-content">
+			<h1>Edit a book</h1>
+			<div class="card">
+				<form
+					action="/book/<%=id%>?_method=PATCH"
+					method="post"
+					class="form-2cols"
+				>
+					<p>
+						<label for="author">Author:</label>
+						<textarea id="author" name="author" type="text">
 <%= book.author %></textarea
-				>
-			</p>
-			<p>
-				<label for="title">Title:</label>
-				<textarea id="title" name="title" type="text">
+						>
+					</p>
+					<p>
+						<label for="title">Title:</label>
+						<textarea id="title" name="title" type="text">
 <%= book.title %></textarea
-				>
-			</p>
-			<p>
-				<label for="year">Year released:</label>
-				<textarea id="year" name="year" type="text"><%= book.year %></textarea>
-			</p>
-			<p>
-				<label for="country">Country:</label>
-				<textarea id="country" name="country" type="text">
+						>
+					</p>
+					<p>
+						<label for="year">Year released:</label>
+						<textarea id="year" name="year" type="text">
+<%= book.year %></textarea
+						>
+					</p>
+					<p>
+						<label for="country">Country:</label>
+						<textarea id="country" name="country" type="text">
 <%= book.country %></textarea
-				>
-			</p>
-			<p>
-				<label for="language">Original language:</label>
-				<textarea id="language" name="language" type="text">
+						>
+					</p>
+					<p>
+						<label for="language">Original language:</label>
+						<textarea id="language" name="language" type="text">
 <%= book.language %></textarea
-				>
-			</p>
-			<p>
-				<label for="link">Wiki link:</label>
-				<textarea id="link" name="link" type="text"><%= book.link %></textarea>
-			</p>
-			<p>
-				<label for="pages">Number of pages:</label>
-				<textarea id="pages" name="pages" type="text">
+						>
+					</p>
+					<p>
+						<label for="link">Wiki link:</label>
+						<textarea id="link" name="link" type="text">
+<%= book.link %></textarea
+						>
+					</p>
+					<p>
+						<label for="pages">Number of pages:</label>
+						<textarea id="pages" name="pages" type="text">
 <%= book.pages %></textarea
+						>
+					</p>
+					<button class="link-button">Submit changes</button>
+				</form>
+			</div>
+			<div>
+				<a class="link-button link-button--mini" href="/books"
+					>Back to the list</a
 				>
-			</p>
-			<button>Submit changes</button>
-		</form>
-		<section>
-			<a href="/books">Back to the list</a>
+			</div>
 		</section>
 	</body>
 </html>
