@@ -35,7 +35,7 @@ app.get('/book/:id', (req, res) => {
 	const { id } = req.params;
 	const book = books[id];
 
-	res.render('book', { book });
+	res.render('book', { book, id });
 });
 
 app.get('/book/:id/edit', (req, res) => {
