@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<h1>Add a new book</h1>
-		<form>
+		<form action="/books" method="post">
 			<p>
 				<label for="author">Author:</label>
 				<input
@@ -19,24 +19,28 @@
 				/>
 			</p>
 			<p>
-				<label for="author">Title:</label>
+				<label for="title">Title:</label>
 				<input id="title" type="text" placeholder="Book title" name="title" />
 			</p>
 			<p>
-				<label for="country">Image:</label>
+				<label for="year">Year released:</label>
+				<input id="year" type="text" placeholder="Release year" name="year" />
+			</p>
+			<p>
+				<label for="country">Country:</label>
 				<input id="country" name="country" placeholder="Country" type="text" />
 			</p>
 			<p>
-				<label for="img">Image:</label>
+				<label for="language">Original language:</label>
 				<input
-					id="img"
-					name="img"
-					placeholder="Link to the image"
+					id="language"
+					name="language"
+					placeholder="Language"
 					type="text"
 				/>
 			</p>
 			<p>
-				<label for="img">Country:</label>
+				<label for="img">Image:</label>
 				<input
 					id="img"
 					name="img"
