@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Edit a book</title>
+	</head>
+	<body>
+		<form action="/books/<%=books[id] %>?_method=PATCH" method="post">
+			<p>
+				<label for="author">Author:</label>
+				<textarea id="author" type="text"><%= book.author %></textarea>
+			</p>
+			<p>
+				<label for="title">Title:</label>
+				<textarea id="title" type="text"><%= book.title %></textarea>
+			</p>
+			<p>
+				<label for="year">Year released:</label>
+				<textarea id="year" type="text"><%= book.year %></textarea>
+			</p>
+			<p>
+				<label for="country">Country:</label>
+				<textarea id="country" type="text"><%= book.country %></textarea>
+			</p>
+			<p>
+				<label for="language">Original language:</label>
+				<textarea id="language" type="text"><%= book.language %></textarea>
+			</p>
+			<p>
+				<label for="link">Wiki link:</label>
+				<textarea id="link" type="text"><%= book.link %></textarea>
+			</p>
+			<p>
+				<label for="pages">Number of pages:</label>
+				<textarea id="pages" type="text"><%= book.pages %></textarea>
+			</p>
+			<button>Submit changes</button>
+		</form>
+		<section>
+			<a href="/books">Back to the list</a>
+		</section>
+	</body>
+</html>
