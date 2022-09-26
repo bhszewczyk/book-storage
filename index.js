@@ -5,6 +5,7 @@ const path = require('path');
 const books = require('./books.json');
 const methodOverride = require('method-override');
 const { v4: getUuid } = require('uuid');
+const { ECDH } = require('crypto');
 
 // enables parsing url forms
 app.use(express.urlencoded({ extended: true }));
@@ -38,11 +39,31 @@ app.get('/book/:id', (req, res) => {
 });
 
 app.get('/book/:id/edit', (req, res) => {
-	console.log(req.params);
+	// console.log(req.params);
 	const { id } = req.params;
 
 	const book = books[id];
 	res.render('edit', { book, books, id });
+});
+
+app.patch('/book/:id', (req, res) => {
+	console.log(req.params);
+	const { id } = req.params;
+	const existingBook = books[id];
+
+	if (!existingBook) {
+		res.render('<h1>Not found</h1>');
+	}
+	const { author, title, year, country, language, link, pages } = req.body;
+	existingBook.author = author;
+	existingBook.title = title;
+	existingBook.year = year;
+	existingBook.country = country;
+	existingBook.language = language;
+	existingBook.link = link;
+	existingBook.pages = pages;
+
+	res.render('books', { books });
 });
 
 // render a form for adding a new book

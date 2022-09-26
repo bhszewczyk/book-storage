@@ -7,34 +7,44 @@
 		<title>Edit a book</title>
 	</head>
 	<body>
-		<form action="/books/<%=books[id] %>?_method=PATCH" method="post">
+		<form action="/book/<%=id%>?_method=PATCH" method="post">
 			<p>
 				<label for="author">Author:</label>
-				<textarea id="author" type="text"><%= book.author %></textarea>
+				<textarea id="author" name="author" type="text">
+<%= book.author %></textarea
+				>
 			</p>
 			<p>
 				<label for="title">Title:</label>
-				<textarea id="title" type="text"><%= book.title %></textarea>
+				<textarea id="title" name="title" type="text">
+<%= book.title %></textarea
+				>
 			</p>
 			<p>
 				<label for="year">Year released:</label>
-				<textarea id="year" type="text"><%= book.year %></textarea>
+				<textarea id="year" name="year" type="text"><%= book.year %></textarea>
 			</p>
 			<p>
 				<label for="country">Country:</label>
-				<textarea id="country" type="text"><%= book.country %></textarea>
+				<textarea id="country" name="country" type="text">
+<%= book.country %></textarea
+				>
 			</p>
 			<p>
 				<label for="language">Original language:</label>
-				<textarea id="language" type="text"><%= book.language %></textarea>
+				<textarea id="language" name="language" type="text">
+<%= book.language %></textarea
+				>
 			</p>
 			<p>
 				<label for="link">Wiki link:</label>
-				<textarea id="link" type="text"><%= book.link %></textarea>
+				<textarea id="link" name="link" type="text"><%= book.link %></textarea>
 			</p>
 			<p>
 				<label for="pages">Number of pages:</label>
-				<textarea id="pages" type="text"><%= book.pages %></textarea>
+				<textarea id="pages" name="pages" type="text">
+<%= book.pages %></textarea
+				>
 			</p>
 			<button>Submit changes</button>
 		</form>
