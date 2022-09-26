@@ -8,13 +8,17 @@
 	</head>
 	<body>
 		<section>
-			<% books.forEach((book, i) => { %>
-			<p>
-				<em><%= book.title %></em> - <strong><%= book.author %></strong>
-				<a href="/book/<%= i %>">details</a>
-			</p>
+			<ol>
+				<% books.forEach((book, i) => { %>
+				<li>
+					<p>
+						<em><%= book.title %></em> - <strong><%= book.author %></strong>
+						<a href="/book/<%= i %>"> - details</a>
+					</p>
+				</li>
 
-			<% }); %>
+				<% }); %>
+			</ol>
 		</section>
 		<section>
 			<h2>Missing something?</h2>
